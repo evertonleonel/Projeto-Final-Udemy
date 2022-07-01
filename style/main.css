@@ -21,6 +21,12 @@ img {
     width: 100%;
 }
 
+.js .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
 .logo-text {
     text-transform: uppercase;
     background-color: #63c6ae;
@@ -66,9 +72,57 @@ img {
 }
 
 .header__btnMenu {
-    
+    float: right;
+    margin: 1.5em;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
 }
 
+.js .header-nav {
+    transition: max-height 1s;
+}
+
+.js .laptop-slider{
+    overflow: hidden;
+    color: white;
+}
+
+.js .laptop-slider .slideshow {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+}
+
+.js .laptop-slider figure {
+    opacity: 0;
+    transition: 1s opacity;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.js .laptop-slider figure.show {
+    opacity: 1;
+    position:relative ;
+}
+
+.js .laptop-slider .prev, .js .laptop-slider .next {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.js .laptop-slider .prev {
+    left: 10px;
+}
+.js .laptop-slider .next {
+    right: 10px;
+}
 
 
 .hero {
@@ -114,7 +168,7 @@ img {
     font-weight: 600;
 }
 
-
+/*  Fim sessão */
 
 
 .people-cards {
@@ -321,7 +375,7 @@ img {
 
 /* Responsivo */
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1025px){
     .header {
         position: fixed;
     }
@@ -383,5 +437,3 @@ img {
         margin: 1.5em;
     }
 }
-
-
